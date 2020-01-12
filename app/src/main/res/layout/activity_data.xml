@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DataActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分钟(min):"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x65"/>
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x50"
+            android:text="间隔(s):"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x65"/>
+
+        <EditText
+            android:id="@+id/interval"
+            android:layout_width="@dimen/x200"
+            android:inputType="numberSigned"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_adddata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="填写数据"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绘制图表"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数据为T则勾选，数据为S则去勾选"
+            android:textSize="@dimen/x30"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_show"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/item_min"
+            android:layout_width="@dimen/x150"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/x100"
+            android:text="分钟"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x50"/>
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
